@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ass0\Ass0.csproj" />
+  </ItemGroup>
+
 </Project>
