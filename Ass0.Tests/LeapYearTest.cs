@@ -36,9 +36,27 @@ namespace Ass0.Tests
         [Fact]
         public void IsBeyond1582(){
 
+            //Arrange?
+            Action action = () => LeapYear.IsLeapYear(1548);
 
             //Assert
-            Assert.False(LeapYear.IsLeapYear(1548));
+            Assert.Throws<Exception>(action);
+
+
+        }
+
+        [Fact]
+        public void IsInputAnInteger(){
+
+            StringWriter writer = new StringWriter();
+            Console.SetOut(writer);
+
+            Console.SetIn(new StringReader("notAnInteger"));
+            LeapYear.Main(new string[0]);
+            
+            var output = writer.GetStringBuilder().ToString().Trim();
+
+            Assert.Equal("Input is not an integer", output);
 
 
         }
