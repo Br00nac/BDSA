@@ -11,7 +11,7 @@ namespace Ass0.Tests
         {
 
             //Assert
-            Assert.True(LeapYear.IsLeapYear(1544));
+            Assert.True(LeapYear.IsLeapYear(1644));
 
         }
 
@@ -20,7 +20,7 @@ namespace Ass0.Tests
 
 
             //Assert
-            Assert.False(LeapYear.IsLeapYear(1500));
+            Assert.False(LeapYear.IsLeapYear(1700));
 
         }
 
@@ -33,6 +33,17 @@ namespace Ass0.Tests
 
         }
 
+        [Fact]
+        public void IsBeyond1582(){
 
+
+            //Assert
+            Assert.False(LeapYear.IsLeapYear(1548));
+
+
+        }
+
+       
+        
     }
 }
